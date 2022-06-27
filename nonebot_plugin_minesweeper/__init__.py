@@ -130,7 +130,7 @@ async def stop_game(matcher: Matcher, cid: str):
         await matcher.finish("扫雷超时，游戏结束")
 
 
-def set_timeout(matcher: Matcher, cid: str, timeout: float = 300):
+def set_timeout(matcher: Matcher, cid: str, timeout: float = 600):
     timer = timers.get(cid, None)
     if timer:
         timer.cancel()
